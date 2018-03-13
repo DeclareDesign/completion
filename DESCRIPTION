@@ -1,11 +1,10 @@
 Package: ddcomplete
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Custom Completions for DeclareDesign
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
-Encoding: UTF-8
-LazyData: true
+Author: Neal Fultz <nfultz@gmail.com>
+Maintainer: Neal Fultz <nfultz@gmail.com>
+Description: Custom tab completions for declare_ steps in DeclareDesign
+License: MIT
+Depends:
+    DeclareDesign
