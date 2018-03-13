@@ -24,9 +24,16 @@ comp_env <- list2env(list(completer=NULL), parent = emptyenv());
     comp_env$completer <- utils::rc.getOption("custom.completer")
 
 
-    utils::rc.options("custom.completer"= DDcompletor)
+    rc.options("custom.completer"= DDcompletor)
 
   }
+  if(requireNamespace("DeclareDesign", quietly = FALSE)){
+    DeclareDesign::declare_design # suppresses NOTES
+  }
+  else {
+    warning("Could not find DeclareDesign package - you may want to install it or detach ddcomplete")
+  }
+
 }
 
 
