@@ -34,13 +34,14 @@ comp_env <- list2env(list(completer=NULL), parent = emptyenv());
   rc.options(custom.completer = comp_env$completer)
 }
 
+# Sneaks around import checks ? see also jimhest/completeme on github
 complete_token <- get(".completeToken", asNamespace("utils"))
 
 
 
 DDcompletor <- function(CompletionEnv){
 
-  on.exit(    utils::rc.options("custom.completer"= DDcompletor) )
+  on.exit(    rc.options("custom.completer"= DDcompletor) )
   rc.options(custom.completer=comp_env$completer)
   ret <- complete_token() #fills in CompletionEnv data
 
